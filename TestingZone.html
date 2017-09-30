@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>let and const real world</title>
+</head>
+<body>
+<script>
+ 
+ var curryC = curry3(abc)
+ var curryB = curryC(6)
+ var curryA = curryB(3)
+ 
+ function abc(one, two, three) {
+      return one/two/three
+    }
+
+
+ function curry3(fun){
+      return function(one){
+        return function(two){
+          return function (three){
+            return fun(one, two, three)
+          }
+        }
+      }
+    }
+
+
+    console.log(curryA(2))
+
+
+
+  /* > var x ={'0': 'a', '1': 'b'}
+  undefined
+  > var x = {'0': 'a', '1': 'b', length: 2}
+  undefined
+  > x
+  { '0': 'a', '1': 'b', length: 2 }
+  > Array.from(x)
+  [ 'a', 'b' ]
+  > Array.prototype.slice.call(x)
+  [ 'a', 'b' ]
+  > y = ['a', 'b']
+  [ 'a', 'b' ]
+  > y.slice()
+  [ 'a', 'b' ]
+  > y === y.slice()
+  false
+  > y === y.slice(0)
+  false
+  > y.slice(0)
+  [ 'a', 'b' ]
+  > y.slice(1)
+  [ 'b' ]
+  > y.slice(0, 1)
+  [ 'a' ]
+  >  */
+  
+
+</script>
+</body>
+</html>

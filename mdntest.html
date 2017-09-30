@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>let and const real world</title>
+</head>
+<body>
+<script>
+  // Un objet peut être passé en premier argumen
+// de call ou de apply
+var obj = { a: "Toto" };
+
+// Ici, on définit une propriété sur l'objet
+// global
+var a = "Global";
+
+function whatsThis(arg) {
+  // La valeur de this ici dépend de la façon
+  // dont la fonction est appelée
+  return this.a; 
+}
+
+whatsThis();          // "Global"
+whatsThis.call(obj);  // "Toto"
+whatsThis.apply(obj); // "Toto"
+
+</script>
+</body>
+</html>

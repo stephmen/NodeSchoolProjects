@@ -1,0 +1,15 @@
+{
+  "name": "muscat",
+  "version": "1.0.0",
+  "description": "photo de chat",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "stephane menard",
+  "license": "ISC",
+  "dependencies": {
+    "cat-picture": "^5.1.2",
+    "lightning-image-poly": "0.0.10"
+  }
+}
